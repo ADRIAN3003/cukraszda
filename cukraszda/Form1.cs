@@ -137,11 +137,11 @@ namespace cukraszda
         {
             try
             {
-                if (cbTipus.SelectedItem.ToString() == "")
+                if (cbTipus.Text == "")
                 {
                     throw new Exception("Nem írtál be süteménynevet!");
                 }
-                else if (sutemenies.Count(x => x.Tipus.ToLower() == cbTipus.SelectedItem.ToString().ToLower()) == 0)
+                else if (sutemenies.Count(x => x.Tipus.ToLower() == cbTipus.Text.ToLower()) == 0)
                 {
                     throw new Exception("Nincs megfelő sütink. Kérjük Válassz mást!");
                 }
