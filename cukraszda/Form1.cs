@@ -21,62 +21,16 @@ namespace cukraszda
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            using (StreamReader sr = new StreamReader("cuki.txt"))
-            {
-                while (!sr.EndOfStream)
-                {
-                    string[] tmp = sr.ReadLine().Split(';');
-                    string nev = tmp[0];
-                    string tipus = tmp[1];
-                    bool dijazott = Convert.ToBoolean(tmp[2]);
-                    int ar = Convert.ToInt32(tmp[3]);
-                    string egyseg = tmp[4];
-                    sutemenies.Add(new Sutemeny(nev, tipus, dijazott, ar, egyseg));
-                }
-            }
+            ElsoFeladat();
+            MasodikFeladat();
+            HarmadikFeladat();
+            NegyedikFeladat();
+            OtodikFeladat();
+            HatodikFeladat();
+        }
 
-            Random rnd = new Random();
-            tbAjanlat.Text = "Mai ajánlatunk: " + sutemenies[rnd.Next(0, sutemenies.Count)].Nev;
-
-            Sutemeny draga = sutemenies.OrderBy(x => x.Ar).Last();
-            tbDraga.Text = draga.Nev;
-            tbDragaAr.Text = draga.Ar + " Ft/" + draga.Egyseg;
-
-            Sutemeny olcso = sutemenies.OrderBy(x => x.Ar).First();
-            tbOlcso.Text = olcso.Nev;
-            tbOlcsoAr.Text = olcso.Ar + " Ft/" + olcso.Egyseg;
-
-            List<string> dijnyertes = new List<string>();
-            foreach (var suti in sutemenies)
-            {
-                if (suti.Dijazott)
-                {
-                    if (!dijnyertes.Contains(suti.Nev + "-" + suti.Egyseg))
-                    {
-                        dijnyertes.Add(suti.Nev + "-" + suti.Egyseg);
-                    }
-                }
-            }
-
-            tbDijnyertes.Text = dijnyertes.Count + " féle díjnyertes édességből választhat.";
-
-            List<string> kiiras = new List<string>();
-            foreach (var suti in sutemenies)
-            {
-                if (!kiiras.Contains(suti.Nev + " " + suti.Tipus))
-                {
-                    kiiras.Add(suti.Nev + " " + suti.Tipus);
-                }
-            }
-
-            using (StreamWriter sw = new StreamWriter("lista.txt"))
-            {
-                foreach (var suti in kiiras)
-                {
-                    sw.WriteLine(suti);
-                }
-            }
-
+        private void HatodikFeladat()
+        {
             Dictionary<string, int> stats = new Dictionary<string, int>();
             foreach (var suti in sutemenies)
             {
@@ -95,6 +49,77 @@ namespace cukraszda
                 foreach (var stat in stats)
                 {
                     sw.WriteLine(stat.Key + ";" + stat.Value);
+                }
+            }
+        }
+
+        private void OtodikFeladat()
+        {
+            List<string> kiiras = new List<string>();
+            foreach (var suti in sutemenies)
+            {
+                if (!kiiras.Contains(suti.Nev + " " + suti.Tipus))
+                {
+                    kiiras.Add(suti.Nev + " " + suti.Tipus);
+                }
+            }
+
+            using (StreamWriter sw = new StreamWriter("lista.txt"))
+            {
+                foreach (var suti in kiiras)
+                {
+                    sw.WriteLine(suti);
+                }
+            }
+        }
+
+        private void NegyedikFeladat()
+        {
+            List<string> dijnyertes = new List<string>();
+            foreach (var suti in sutemenies)
+            {
+                if (suti.Dijazott)
+                {
+                    if (!dijnyertes.Contains(suti.Nev + "-" + suti.Egyseg))
+                    {
+                        dijnyertes.Add(suti.Nev + "-" + suti.Egyseg);
+                    }
+                }
+            }
+
+            tbDijnyertes.Text = dijnyertes.Count + " féle díjnyertes édességből választhat.";
+        }
+
+        private void HarmadikFeladat()
+        {
+            Sutemeny draga = sutemenies.OrderBy(x => x.Ar).Last();
+            tbDraga.Text = draga.Nev;
+            tbDragaAr.Text = draga.Ar + " Ft/" + draga.Egyseg;
+
+            Sutemeny olcso = sutemenies.OrderBy(x => x.Ar).First();
+            tbOlcso.Text = olcso.Nev;
+            tbOlcsoAr.Text = olcso.Ar + " Ft/" + olcso.Egyseg;
+        }
+
+        private void MasodikFeladat()
+        {
+            Random rnd = new Random();
+            tbAjanlat.Text = "Mai ajánlatunk: " + sutemenies[rnd.Next(0, sutemenies.Count)].Nev;
+        }
+
+        private void ElsoFeladat()
+        {
+            using (StreamReader sr = new StreamReader("cuki.txt"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string[] tmp = sr.ReadLine().Split(';');
+                    string nev = tmp[0];
+                    string tipus = tmp[1];
+                    bool dijazott = Convert.ToBoolean(tmp[2]);
+                    int ar = Convert.ToInt32(tmp[3]);
+                    string egyseg = tmp[4];
+                    sutemenies.Add(new Sutemeny(nev, tipus, dijazott, ar, egyseg));
                 }
             }
         }
