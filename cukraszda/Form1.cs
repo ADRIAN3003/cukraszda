@@ -22,6 +22,7 @@ namespace cukraszda
         private void Form1_Shown(object sender, EventArgs e)
         {
             ElsoFeladat();
+            ComboBoxFeltoltes();
             MasodikFeladat();
             HarmadikFeladat();
             NegyedikFeladat();
@@ -122,7 +123,10 @@ namespace cukraszda
                     sutemenies.Add(new Sutemeny(nev, tipus, dijazott, ar, egyseg));
                 }
             }
+        }
 
+        private void ComboBoxFeltoltes()
+        {
             foreach (var suti in sutemenies)
             {
                 if (!cbTipus.Items.Contains(suti.Tipus))
