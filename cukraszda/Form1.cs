@@ -76,6 +76,29 @@ namespace cukraszda
                     sw.WriteLine(suti.Key + " " + suti.Value);
                 }
             }
+
+
+            Dictionary<string, int> stats = new Dictionary<string, int>();
+            foreach (var suti in sutemenies)
+            {
+                if (stats.ContainsKey(suti.Tipus))
+                {
+                    stats[suti.Tipus]++;
+                }
+                else
+                {
+                    stats.Add(suti.Tipus, 1);
+                }
+            }
+
+
+            using (StreamWriter sw = new StreamWriter("stat.csv"))
+            {
+                foreach (var stat in stats)
+                {
+                    sw.WriteLine(stat.Key + ";" + stat.Value);
+                }
+            }
         }
     }
 }
