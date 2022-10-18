@@ -36,7 +36,29 @@ namespace cukraszda
             }
 
             Random rnd = new Random();
+            tbAjanlat.Text = "Mai ajánlatunk: " + sutemenies[rnd.Next(0, sutemenies.Count)].Nev;
 
+            Sutemeny draga = sutemenies.OrderBy(x => x.Ar).Last();
+            tbDraga.Text = draga.Nev;
+            tbDragaAr.Text = draga.Ar + " Ft/" + draga.Egyseg;
+
+            Sutemeny olcso = sutemenies.OrderBy(x => x.Ar).First();
+            tbOlcso.Text = olcso.Nev;
+            tbOlcsoAr.Text = olcso.Ar + " Ft/" + olcso.Egyseg;
+
+            List<string> dijnyertes = new List<string>();
+            foreach (var suti in sutemenies)
+            {
+                if (suti.Dijazott)
+                {
+                    if (!dijnyertes.Contains(suti.Nev + "-" + suti.Egyseg))
+                    {
+                        dijnyertes.Add(suti.Nev + "-" + suti.Egyseg);
+                    }
+                }
+            }
+
+            tbDijnyertes.Text = dijnyertes.Count + " féle díjnyertes édességből választhat.";
         }
     }
 }

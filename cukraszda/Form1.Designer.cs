@@ -29,15 +29,15 @@ namespace cukraszda
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbAjanlat = new System.Windows.Forms.TextBox();
+            this.tbDijnyertes = new System.Windows.Forms.TextBox();
+            this.lblDraga = new System.Windows.Forms.Label();
+            this.lblTipus = new System.Windows.Forms.Label();
+            this.tbDraga = new System.Windows.Forms.TextBox();
+            this.tbOlcso = new System.Windows.Forms.TextBox();
+            this.tbDragaAr = new System.Windows.Forms.TextBox();
+            this.tbOlcsoAr = new System.Windows.Forms.TextBox();
+            this.tbTipus = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,87 +50,88 @@ namespace cukraszda
             this.label6 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblOlcso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbAjanlat
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 35);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 26);
-            this.textBox1.TabIndex = 0;
+            this.tbAjanlat.Location = new System.Drawing.Point(20, 35);
+            this.tbAjanlat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAjanlat.Name = "tbAjanlat";
+            this.tbAjanlat.Size = new System.Drawing.Size(338, 26);
+            this.tbAjanlat.TabIndex = 0;
             // 
-            // textBox2
+            // tbDijnyertes
             // 
-            this.textBox2.Location = new System.Drawing.Point(20, 90);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 26);
-            this.textBox2.TabIndex = 0;
+            this.tbDijnyertes.Location = new System.Drawing.Point(20, 90);
+            this.tbDijnyertes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbDijnyertes.Name = "tbDijnyertes";
+            this.tbDijnyertes.Size = new System.Drawing.Size(338, 26);
+            this.tbDijnyertes.TabIndex = 0;
             // 
-            // label1
+            // lblDraga
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Legdrágább süteményünk";
+            this.lblDraga.AutoSize = true;
+            this.lblDraga.Location = new System.Drawing.Point(20, 143);
+            this.lblDraga.Name = "lblDraga";
+            this.lblDraga.Size = new System.Drawing.Size(194, 20);
+            this.lblDraga.TabIndex = 1;
+            this.lblDraga.Text = "Legdrágább süteményünk";
             // 
-            // label2
+            // lblTipus
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 369);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Süti típusa";
+            this.lblTipus.AutoSize = true;
+            this.lblTipus.Location = new System.Drawing.Point(44, 369);
+            this.lblTipus.Name = "lblTipus";
+            this.lblTipus.Size = new System.Drawing.Size(84, 20);
+            this.lblTipus.TabIndex = 1;
+            this.lblTipus.Text = "Süti típusa";
             // 
-            // textBox3
+            // tbDraga
             // 
-            this.textBox3.Location = new System.Drawing.Point(20, 192);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(273, 26);
-            this.textBox3.TabIndex = 0;
+            this.tbDraga.Location = new System.Drawing.Point(20, 192);
+            this.tbDraga.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbDraga.Name = "tbDraga";
+            this.tbDraga.Size = new System.Drawing.Size(300, 26);
+            this.tbDraga.TabIndex = 0;
             // 
-            // textBox4
+            // tbOlcso
             // 
-            this.textBox4.Location = new System.Drawing.Point(20, 290);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(273, 26);
-            this.textBox4.TabIndex = 0;
+            this.tbOlcso.Location = new System.Drawing.Point(20, 290);
+            this.tbOlcso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOlcso.Name = "tbOlcso";
+            this.tbOlcso.Size = new System.Drawing.Size(300, 26);
+            this.tbOlcso.TabIndex = 0;
             // 
-            // textBox5
+            // tbDragaAr
             // 
-            this.textBox5.Location = new System.Drawing.Point(301, 192);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(183, 26);
-            this.textBox5.TabIndex = 0;
+            this.tbDragaAr.Location = new System.Drawing.Point(339, 192);
+            this.tbDragaAr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbDragaAr.Name = "tbDragaAr";
+            this.tbDragaAr.Size = new System.Drawing.Size(183, 26);
+            this.tbDragaAr.TabIndex = 0;
             // 
-            // textBox6
+            // tbOlcsoAr
             // 
-            this.textBox6.Location = new System.Drawing.Point(301, 290);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 26);
-            this.textBox6.TabIndex = 0;
+            this.tbOlcsoAr.Location = new System.Drawing.Point(339, 290);
+            this.tbOlcsoAr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOlcsoAr.Name = "tbOlcsoAr";
+            this.tbOlcsoAr.Size = new System.Drawing.Size(183, 26);
+            this.tbOlcsoAr.TabIndex = 0;
             // 
-            // textBox7
+            // tbTipus
             // 
-            this.textBox7.Location = new System.Drawing.Point(158, 366);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(326, 26);
-            this.textBox7.TabIndex = 0;
+            this.tbTipus.Location = new System.Drawing.Point(158, 366);
+            this.tbTipus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbTipus.Name = "tbTipus";
+            this.tbTipus.Size = new System.Drawing.Size(364, 26);
+            this.tbTipus.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::cukraszda.Properties.Resources.kep;
-            this.pictureBox1.Location = new System.Drawing.Point(340, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(378, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(144, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -149,7 +150,7 @@ namespace cukraszda
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(550, 47);
+            this.label3.Location = new System.Drawing.Point(571, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 4;
@@ -174,7 +175,7 @@ namespace cukraszda
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(550, 111);
+            this.label4.Location = new System.Drawing.Point(571, 111);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 20);
             this.label4.TabIndex = 4;
@@ -199,7 +200,7 @@ namespace cukraszda
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(550, 183);
+            this.label5.Location = new System.Drawing.Point(571, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 20);
             this.label5.TabIndex = 4;
@@ -208,7 +209,7 @@ namespace cukraszda
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(550, 247);
+            this.label6.Location = new System.Drawing.Point(571, 247);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 20);
             this.label6.TabIndex = 4;
@@ -217,7 +218,7 @@ namespace cukraszda
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(554, 313);
+            this.checkBox1.Location = new System.Drawing.Point(575, 313);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(82, 24);
             this.checkBox1.TabIndex = 5;
@@ -233,6 +234,15 @@ namespace cukraszda
             this.button2.Text = "Új süti felvétele";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // lblOlcso
+            // 
+            this.lblOlcso.AutoSize = true;
+            this.lblOlcso.Location = new System.Drawing.Point(20, 244);
+            this.lblOlcso.Name = "lblOlcso";
+            this.lblOlcso.Size = new System.Drawing.Size(190, 20);
+            this.lblOlcso.TabIndex = 1;
+            this.lblOlcso.Text = "Legolcsóbb süteményünk";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -246,22 +256,24 @@ namespace cukraszda
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.lblTipus);
+            this.Controls.Add(this.lblOlcso);
+            this.Controls.Add(this.lblDraga);
+            this.Controls.Add(this.tbOlcso);
+            this.Controls.Add(this.tbTipus);
+            this.Controls.Add(this.tbOlcsoAr);
+            this.Controls.Add(this.tbDragaAr);
             this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbDraga);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbDijnyertes);
             this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbAjanlat);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cukrászda";
             this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -272,15 +284,15 @@ namespace cukraszda
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbAjanlat;
+        private System.Windows.Forms.TextBox tbDijnyertes;
+        private System.Windows.Forms.Label lblDraga;
+        private System.Windows.Forms.Label lblTipus;
+        private System.Windows.Forms.TextBox tbDraga;
+        private System.Windows.Forms.TextBox tbOlcso;
+        private System.Windows.Forms.TextBox tbDragaAr;
+        private System.Windows.Forms.TextBox tbOlcsoAr;
+        private System.Windows.Forms.TextBox tbTipus;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
@@ -293,6 +305,7 @@ namespace cukraszda
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblOlcso;
     }
 }
 
