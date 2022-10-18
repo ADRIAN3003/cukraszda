@@ -68,7 +68,7 @@ namespace cukraszda
             this.tbDijnyertes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbDijnyertes.Name = "tbDijnyertes";
             this.tbDijnyertes.Size = new System.Drawing.Size(338, 26);
-            this.tbDijnyertes.TabIndex = 0;
+            this.tbDijnyertes.TabIndex = 1;
             // 
             // lblDraga
             // 
@@ -76,7 +76,7 @@ namespace cukraszda
             this.lblDraga.Location = new System.Drawing.Point(20, 143);
             this.lblDraga.Name = "lblDraga";
             this.lblDraga.Size = new System.Drawing.Size(194, 20);
-            this.lblDraga.TabIndex = 1;
+            this.lblDraga.TabIndex = 2;
             this.lblDraga.Text = "Legdrágább süteményünk";
             // 
             // lblTipus
@@ -85,7 +85,7 @@ namespace cukraszda
             this.lblTipus.Location = new System.Drawing.Point(44, 369);
             this.lblTipus.Name = "lblTipus";
             this.lblTipus.Size = new System.Drawing.Size(84, 20);
-            this.lblTipus.TabIndex = 1;
+            this.lblTipus.TabIndex = 8;
             this.lblTipus.Text = "Süti típusa";
             // 
             // tbDraga
@@ -94,7 +94,7 @@ namespace cukraszda
             this.tbDraga.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbDraga.Name = "tbDraga";
             this.tbDraga.Size = new System.Drawing.Size(300, 26);
-            this.tbDraga.TabIndex = 0;
+            this.tbDraga.TabIndex = 3;
             // 
             // tbOlcso
             // 
@@ -102,7 +102,7 @@ namespace cukraszda
             this.tbOlcso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbOlcso.Name = "tbOlcso";
             this.tbOlcso.Size = new System.Drawing.Size(300, 26);
-            this.tbOlcso.TabIndex = 0;
+            this.tbOlcso.TabIndex = 6;
             // 
             // tbDragaAr
             // 
@@ -110,7 +110,7 @@ namespace cukraszda
             this.tbDragaAr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbDragaAr.Name = "tbDragaAr";
             this.tbDragaAr.Size = new System.Drawing.Size(183, 26);
-            this.tbDragaAr.TabIndex = 0;
+            this.tbDragaAr.TabIndex = 4;
             // 
             // tbOlcsoAr
             // 
@@ -118,7 +118,7 @@ namespace cukraszda
             this.tbOlcsoAr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbOlcsoAr.Name = "tbOlcsoAr";
             this.tbOlcsoAr.Size = new System.Drawing.Size(183, 26);
-            this.tbOlcsoAr.TabIndex = 0;
+            this.tbOlcsoAr.TabIndex = 7;
             // 
             // pictureBox1
             // 
@@ -135,7 +135,7 @@ namespace cukraszda
             this.btnMentes.Location = new System.Drawing.Point(133, 439);
             this.btnMentes.Name = "btnMentes";
             this.btnMentes.Size = new System.Drawing.Size(212, 37);
-            this.btnMentes.TabIndex = 3;
+            this.btnMentes.TabIndex = 10;
             this.btnMentes.Text = "Árajánlat mentése";
             this.btnMentes.UseVisualStyleBackColor = true;
             this.btnMentes.Click += new System.EventHandler(this.btnMentes_Click);
@@ -146,7 +146,7 @@ namespace cukraszda
             this.label3.Location = new System.Drawing.Point(571, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 11;
             this.label3.Text = "Süti neve:";
             // 
             // tbSutiNeve
@@ -155,7 +155,7 @@ namespace cukraszda
             this.tbSutiNeve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSutiNeve.Name = "tbSutiNeve";
             this.tbSutiNeve.Size = new System.Drawing.Size(227, 26);
-            this.tbSutiNeve.TabIndex = 0;
+            this.tbSutiNeve.TabIndex = 12;
             // 
             // tbSutiTipusa
             // 
@@ -163,7 +163,7 @@ namespace cukraszda
             this.tbSutiTipusa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSutiTipusa.Name = "tbSutiTipusa";
             this.tbSutiTipusa.Size = new System.Drawing.Size(227, 26);
-            this.tbSutiTipusa.TabIndex = 0;
+            this.tbSutiTipusa.TabIndex = 14;
             // 
             // label4
             // 
@@ -171,7 +171,7 @@ namespace cukraszda
             this.label4.Location = new System.Drawing.Point(571, 111);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 20);
-            this.label4.TabIndex = 4;
+            this.label4.TabIndex = 13;
             this.label4.Text = "Süti típusa:";
             // 
             // tbSutiEgysege
@@ -180,7 +180,7 @@ namespace cukraszda
             this.tbSutiEgysege.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSutiEgysege.Name = "tbSutiEgysege";
             this.tbSutiEgysege.Size = new System.Drawing.Size(227, 26);
-            this.tbSutiEgysege.TabIndex = 0;
+            this.tbSutiEgysege.TabIndex = 16;
             // 
             // tbSutiAr
             // 
@@ -188,7 +188,7 @@ namespace cukraszda
             this.tbSutiAr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSutiAr.Name = "tbSutiAr";
             this.tbSutiAr.Size = new System.Drawing.Size(227, 26);
-            this.tbSutiAr.TabIndex = 0;
+            this.tbSutiAr.TabIndex = 18;
             // 
             // label5
             // 
@@ -196,7 +196,7 @@ namespace cukraszda
             this.label5.Location = new System.Drawing.Point(571, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 20);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 15;
             this.label5.Text = "Egység:";
             // 
             // label6
@@ -205,7 +205,7 @@ namespace cukraszda
             this.label6.Location = new System.Drawing.Point(571, 247);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 20);
-            this.label6.TabIndex = 4;
+            this.label6.TabIndex = 17;
             this.label6.Text = "Ár:";
             // 
             // cbSutiDijazott
@@ -214,7 +214,7 @@ namespace cukraszda
             this.cbSutiDijazott.Location = new System.Drawing.Point(575, 313);
             this.cbSutiDijazott.Name = "cbSutiDijazott";
             this.cbSutiDijazott.Size = new System.Drawing.Size(82, 24);
-            this.cbSutiDijazott.TabIndex = 5;
+            this.cbSutiDijazott.TabIndex = 19;
             this.cbSutiDijazott.Text = "Díjazott";
             this.cbSutiDijazott.UseVisualStyleBackColor = true;
             // 
@@ -223,7 +223,7 @@ namespace cukraszda
             this.btnUjSuti.Location = new System.Drawing.Point(620, 381);
             this.btnUjSuti.Name = "btnUjSuti";
             this.btnUjSuti.Size = new System.Drawing.Size(212, 37);
-            this.btnUjSuti.TabIndex = 3;
+            this.btnUjSuti.TabIndex = 20;
             this.btnUjSuti.Text = "Új süti felvétele";
             this.btnUjSuti.UseVisualStyleBackColor = true;
             this.btnUjSuti.Click += new System.EventHandler(this.btnUjSuti_Click);
@@ -234,7 +234,7 @@ namespace cukraszda
             this.lblOlcso.Location = new System.Drawing.Point(20, 244);
             this.lblOlcso.Name = "lblOlcso";
             this.lblOlcso.Size = new System.Drawing.Size(190, 20);
-            this.lblOlcso.TabIndex = 1;
+            this.lblOlcso.TabIndex = 5;
             this.lblOlcso.Text = "Legolcsóbb süteményünk";
             // 
             // cbTipus
@@ -245,7 +245,7 @@ namespace cukraszda
             this.cbTipus.Name = "cbTipus";
             this.cbTipus.Size = new System.Drawing.Size(373, 28);
             this.cbTipus.Sorted = true;
-            this.cbTipus.TabIndex = 6;
+            this.cbTipus.TabIndex = 9;
             // 
             // Form1
             // 
@@ -278,7 +278,7 @@ namespace cukraszda
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cukrászda";
+            this.Text = "0";
             this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
