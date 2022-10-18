@@ -59,6 +59,23 @@ namespace cukraszda
             }
 
             tbDijnyertes.Text = dijnyertes.Count + " féle díjnyertes édességből választhat.";
+
+            Dictionary<string, string> kiiras = new Dictionary<string, string>();
+            foreach (var suti in sutemenies)
+            {
+                if (!kiiras.ContainsKey(suti.Nev))
+                {
+                    kiiras.Add(suti.Nev, suti.Tipus);
+                }
+            }
+
+            using (StreamWriter sw = new StreamWriter("lista.txt"))
+            {
+                foreach (var suti in kiiras)
+                {
+                    sw.WriteLine(suti.Key + " " + suti.Value);
+                }
+            }
         }
     }
 }
