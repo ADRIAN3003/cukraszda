@@ -37,7 +37,6 @@ namespace cukraszda
             this.tbOlcso = new System.Windows.Forms.TextBox();
             this.tbDragaAr = new System.Windows.Forms.TextBox();
             this.tbOlcsoAr = new System.Windows.Forms.TextBox();
-            this.tbTipus = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMentes = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ namespace cukraszda
             this.cbSutiDijazott = new System.Windows.Forms.CheckBox();
             this.btnUjSuti = new System.Windows.Forms.Button();
             this.lblOlcso = new System.Windows.Forms.Label();
+            this.cbTipus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,14 +119,6 @@ namespace cukraszda
             this.tbOlcsoAr.Name = "tbOlcsoAr";
             this.tbOlcsoAr.Size = new System.Drawing.Size(183, 26);
             this.tbOlcsoAr.TabIndex = 0;
-            // 
-            // tbTipus
-            // 
-            this.tbTipus.Location = new System.Drawing.Point(158, 366);
-            this.tbTipus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbTipus.Name = "tbTipus";
-            this.tbTipus.Size = new System.Drawing.Size(364, 26);
-            this.tbTipus.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -245,11 +237,20 @@ namespace cukraszda
             this.lblOlcso.TabIndex = 1;
             this.lblOlcso.Text = "Legolcsóbb süteményünk";
             // 
+            // cbTipus
+            // 
+            this.cbTipus.FormattingEnabled = true;
+            this.cbTipus.Location = new System.Drawing.Point(149, 366);
+            this.cbTipus.Name = "cbTipus";
+            this.cbTipus.Size = new System.Drawing.Size(373, 28);
+            this.cbTipus.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 505);
+            this.Controls.Add(this.cbTipus);
             this.Controls.Add(this.cbSutiDijazott);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -262,7 +263,6 @@ namespace cukraszda
             this.Controls.Add(this.lblOlcso);
             this.Controls.Add(this.lblDraga);
             this.Controls.Add(this.tbOlcso);
-            this.Controls.Add(this.tbTipus);
             this.Controls.Add(this.tbOlcsoAr);
             this.Controls.Add(this.tbDragaAr);
             this.Controls.Add(this.tbSutiAr);
@@ -294,7 +294,6 @@ namespace cukraszda
         private System.Windows.Forms.TextBox tbOlcso;
         private System.Windows.Forms.TextBox tbDragaAr;
         private System.Windows.Forms.TextBox tbOlcsoAr;
-        private System.Windows.Forms.TextBox tbTipus;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMentes;
         private System.Windows.Forms.Label label3;
@@ -308,6 +307,7 @@ namespace cukraszda
         private System.Windows.Forms.CheckBox cbSutiDijazott;
         private System.Windows.Forms.Button btnUjSuti;
         private System.Windows.Forms.Label lblOlcso;
+        private System.Windows.Forms.ComboBox cbTipus;
     }
 }
 

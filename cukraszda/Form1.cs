@@ -122,17 +122,26 @@ namespace cukraszda
                     sutemenies.Add(new Sutemeny(nev, tipus, dijazott, ar, egyseg));
                 }
             }
+
+            foreach (var suti in sutemenies)
+            {
+                if (!cbTipus.Items.Contains(suti.Tipus))
+                {
+                    cbTipus.Items.Add(suti.Tipus);
+                }
+            }
+            cbTipus.SelectedIndex = 0;
         }
 
         private void btnMentes_Click(object sender, EventArgs e)
         {
             try
             {
-                if (tbTipus.Text == "")
+                if (cbTipus.SelectedItem.ToString() == "")
                 {
                     throw new Exception("Nem írtál be süteménynevet!");
                 }
-                else if (sutemenies.Count(x => x.Tipus.ToLower() == tbTipus.Text.ToLower()) == 0)
+                else if (sutemenies.Count(x => x.Tipus.ToLower() == cbTipus.SelectedItem.ToString().ToLower()) == 0)
                 {
                     throw new Exception("Nincs megfelő sütink. Kérjük Válassz mást!");
                 }
@@ -144,7 +153,7 @@ namespace cukraszda
                     {
                         foreach (var ajanlat in sutemenies)
                         {
-                            if (ajanlat.Tipus.ToLower() == tbTipus.Text.ToLower())
+                            if (ajanlat.Tipus.ToLower() == cbTipus.SelectedItem.ToString().ToLower())
                             {
                                 kiirt++;
                                 osszeg += ajanlat.Ar;
