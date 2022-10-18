@@ -60,12 +60,12 @@ namespace cukraszda
 
             tbDijnyertes.Text = dijnyertes.Count + " féle díjnyertes édességből választhat.";
 
-            Dictionary<string, string> kiiras = new Dictionary<string, string>();
+            List<string> kiiras = new List<string>();
             foreach (var suti in sutemenies)
             {
-                if (!kiiras.ContainsKey(suti.Nev))
+                if (!kiiras.Contains(suti.Nev + " " + suti.Tipus))
                 {
-                    kiiras.Add(suti.Nev, suti.Tipus);
+                    kiiras.Add(suti.Nev + " " + suti.Tipus);
                 }
             }
 
@@ -73,10 +73,9 @@ namespace cukraszda
             {
                 foreach (var suti in kiiras)
                 {
-                    sw.WriteLine(suti.Key + " " + suti.Value);
+                    sw.WriteLine(suti);
                 }
             }
-
 
             Dictionary<string, int> stats = new Dictionary<string, int>();
             foreach (var suti in sutemenies)
@@ -91,13 +90,80 @@ namespace cukraszda
                 }
             }
 
-
             using (StreamWriter sw = new StreamWriter("stat.csv"))
             {
                 foreach (var stat in stats)
                 {
                     sw.WriteLine(stat.Key + ";" + stat.Value);
                 }
+            }
+        }
+
+        private void btnMentes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbTipus.Text == "")
+                {
+                    throw new Exception("Nem írtál be süteménynevet!");
+                }
+                else if (sutemenies.Count(x => x.Tipus.ToLower() == tbTipus.Text.ToLower()) == 0)
+                {
+                    throw new Exception("Nincs megfelő sütink. Kérjük Válassz mást!");
+                }
+                else
+                {
+                    double kiirt = 0;
+                    double osszeg = 0;
+                    using (StreamWriter sw = new StreamWriter("ajanlat.txt"))
+                    {
+                        foreach (var ajanlat in sutemenies)
+                        {
+                            if (ajanlat.Tipus.ToLower() == tbTipus.Text.ToLower())
+                            {
+                                kiirt++;
+                                osszeg += ajanlat.Ar;
+                                sw.WriteLine(ajanlat.Nev + " " + ajanlat.Ar + " Ft/" + ajanlat.Egyseg);
+                            }
+                        }
+                    }
+                    MessageBox.Show(kiirt + " db sütit írtam ki az ajanlat.txt-be\nátlagár: " + osszeg / kiirt + " Ft");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUjSuti_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int ujSutiAr = 0;
+                if (tbSutiNeve.Text == "" || tbSutiTipusa.Text == "" || tbSutiEgysege.Text == "" || tbSutiAr.Text == "")
+                {
+                    throw new Exception("Nem adtál meg minden adatot!");
+                }
+                else if (!int.TryParse(tbSutiAr.Text, out ujSutiAr))
+                {
+                    throw new Exception("Az új sütemény ára nem szám!");
+                }
+                else
+                {
+                    sutemenies.Add(new Sutemeny(tbSutiNeve.Text, tbSutiTipusa.Text, cbSutiDijazott.Checked, ujSutiAr, tbSutiEgysege.Text));
+
+                    using (StreamWriter sw = File.AppendText("cuki.txt"))
+                    {
+                        sw.WriteLine(tbSutiNeve.Text + ";" + tbSutiTipusa.Text + ";" + cbSutiDijazott.Checked + ";" + tbSutiAr.Text + ";" + tbSutiEgysege.Text);
+                    }
+
+                    MessageBox.Show("Az állomány bővítése sikeres volt!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -39,17 +39,17 @@ namespace cukraszda
             this.tbOlcsoAr = new System.Windows.Forms.TextBox();
             this.tbTipus = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMentes = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbSutiNeve = new System.Windows.Forms.TextBox();
+            this.tbSutiTipusa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tbSutiEgysege = new System.Windows.Forms.TextBox();
+            this.tbSutiAr = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cbSutiDijazott = new System.Windows.Forms.CheckBox();
+            this.btnUjSuti = new System.Windows.Forms.Button();
             this.lblOlcso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -138,14 +138,15 @@ namespace cukraszda
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnMentes
             // 
-            this.button1.Location = new System.Drawing.Point(133, 439);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 37);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Árajánlat mentése";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMentes.Location = new System.Drawing.Point(133, 439);
+            this.btnMentes.Name = "btnMentes";
+            this.btnMentes.Size = new System.Drawing.Size(212, 37);
+            this.btnMentes.TabIndex = 3;
+            this.btnMentes.Text = "Árajánlat mentése";
+            this.btnMentes.UseVisualStyleBackColor = true;
+            this.btnMentes.Click += new System.EventHandler(this.btnMentes_Click);
             // 
             // label3
             // 
@@ -156,21 +157,21 @@ namespace cukraszda
             this.label3.TabIndex = 4;
             this.label3.Text = "Süti neve:";
             // 
-            // textBox8
+            // tbSutiNeve
             // 
-            this.textBox8.Location = new System.Drawing.Point(677, 44);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(227, 26);
-            this.textBox8.TabIndex = 0;
+            this.tbSutiNeve.Location = new System.Drawing.Point(677, 44);
+            this.tbSutiNeve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSutiNeve.Name = "tbSutiNeve";
+            this.tbSutiNeve.Size = new System.Drawing.Size(227, 26);
+            this.tbSutiNeve.TabIndex = 0;
             // 
-            // textBox9
+            // tbSutiTipusa
             // 
-            this.textBox9.Location = new System.Drawing.Point(677, 108);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(227, 26);
-            this.textBox9.TabIndex = 0;
+            this.tbSutiTipusa.Location = new System.Drawing.Point(677, 108);
+            this.tbSutiTipusa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSutiTipusa.Name = "tbSutiTipusa";
+            this.tbSutiTipusa.Size = new System.Drawing.Size(227, 26);
+            this.tbSutiTipusa.TabIndex = 0;
             // 
             // label4
             // 
@@ -181,21 +182,21 @@ namespace cukraszda
             this.label4.TabIndex = 4;
             this.label4.Text = "Süti típusa:";
             // 
-            // textBox10
+            // tbSutiEgysege
             // 
-            this.textBox10.Location = new System.Drawing.Point(677, 180);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(227, 26);
-            this.textBox10.TabIndex = 0;
+            this.tbSutiEgysege.Location = new System.Drawing.Point(677, 180);
+            this.tbSutiEgysege.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSutiEgysege.Name = "tbSutiEgysege";
+            this.tbSutiEgysege.Size = new System.Drawing.Size(227, 26);
+            this.tbSutiEgysege.TabIndex = 0;
             // 
-            // textBox11
+            // tbSutiAr
             // 
-            this.textBox11.Location = new System.Drawing.Point(677, 244);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(227, 26);
-            this.textBox11.TabIndex = 0;
+            this.tbSutiAr.Location = new System.Drawing.Point(677, 244);
+            this.tbSutiAr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSutiAr.Name = "tbSutiAr";
+            this.tbSutiAr.Size = new System.Drawing.Size(227, 26);
+            this.tbSutiAr.TabIndex = 0;
             // 
             // label5
             // 
@@ -215,24 +216,25 @@ namespace cukraszda
             this.label6.TabIndex = 4;
             this.label6.Text = "Ár:";
             // 
-            // checkBox1
+            // cbSutiDijazott
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(575, 313);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(82, 24);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Díjazott";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbSutiDijazott.AutoSize = true;
+            this.cbSutiDijazott.Location = new System.Drawing.Point(575, 313);
+            this.cbSutiDijazott.Name = "cbSutiDijazott";
+            this.cbSutiDijazott.Size = new System.Drawing.Size(82, 24);
+            this.cbSutiDijazott.TabIndex = 5;
+            this.cbSutiDijazott.Text = "Díjazott";
+            this.cbSutiDijazott.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnUjSuti
             // 
-            this.button2.Location = new System.Drawing.Point(620, 381);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 37);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Új süti felvétele";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUjSuti.Location = new System.Drawing.Point(620, 381);
+            this.btnUjSuti.Name = "btnUjSuti";
+            this.btnUjSuti.Size = new System.Drawing.Size(212, 37);
+            this.btnUjSuti.TabIndex = 3;
+            this.btnUjSuti.Text = "Új süti felvétele";
+            this.btnUjSuti.UseVisualStyleBackColor = true;
+            this.btnUjSuti.Click += new System.EventHandler(this.btnUjSuti_Click);
             // 
             // lblOlcso
             // 
@@ -248,13 +250,13 @@ namespace cukraszda
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 505);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cbSutiDijazott);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUjSuti);
+            this.Controls.Add(this.btnMentes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTipus);
             this.Controls.Add(this.lblOlcso);
@@ -263,12 +265,12 @@ namespace cukraszda
             this.Controls.Add(this.tbTipus);
             this.Controls.Add(this.tbOlcsoAr);
             this.Controls.Add(this.tbDragaAr);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.tbSutiAr);
             this.Controls.Add(this.tbDraga);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.tbSutiTipusa);
+            this.Controls.Add(this.tbSutiEgysege);
             this.Controls.Add(this.tbDijnyertes);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.tbSutiNeve);
             this.Controls.Add(this.tbAjanlat);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -294,17 +296,17 @@ namespace cukraszda
         private System.Windows.Forms.TextBox tbOlcsoAr;
         private System.Windows.Forms.TextBox tbTipus;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMentes;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbSutiNeve;
+        private System.Windows.Forms.TextBox tbSutiTipusa;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox tbSutiEgysege;
+        private System.Windows.Forms.TextBox tbSutiAr;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox cbSutiDijazott;
+        private System.Windows.Forms.Button btnUjSuti;
         private System.Windows.Forms.Label lblOlcso;
     }
 }
