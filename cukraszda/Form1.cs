@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace cukraszda
 {
@@ -15,6 +16,11 @@ namespace cukraszda
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+
         }
     }
 }
