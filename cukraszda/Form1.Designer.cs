@@ -239,10 +239,12 @@ namespace cukraszda
             // 
             // cbTipus
             // 
+            this.cbTipus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipus.FormattingEnabled = true;
             this.cbTipus.Location = new System.Drawing.Point(149, 366);
             this.cbTipus.Name = "cbTipus";
             this.cbTipus.Size = new System.Drawing.Size(373, 28);
+            this.cbTipus.Sorted = true;
             this.cbTipus.TabIndex = 6;
             // 
             // Form1
