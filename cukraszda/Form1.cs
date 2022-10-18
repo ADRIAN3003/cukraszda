@@ -34,6 +34,9 @@ namespace cukraszda
                     sutemenies.Add(new Sutemeny(nev, tipus, dijazott, ar, egyseg));
                 }
             }
+
+            Random rnd = new Random();
+
         }
     }
 }
