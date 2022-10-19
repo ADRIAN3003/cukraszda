@@ -8,45 +8,12 @@ namespace cukraszda
 {
     class Sutemeny
     {
-        private string nev;
 
-        public string Nev
-        {
-            get { return nev; }
-            private set { nev = value; }
-        }
-
-        private string tipus;
-
-        public string Tipus
-        {
-            get { return tipus; }
-            private set { tipus = value; }
-        }
-
-        private bool dijazott;
-
-        public bool Dijazott
-        {
-            get { return dijazott; }
-            private set { dijazott = value; }
-        }
-
-        private int ar;
-
-        public int Ar
-        {
-            get { return ar; }
-            private set { ar = value; }
-        }
-
-        private string egyseg;
-
-        public string Egyseg
-        {
-            get { return egyseg; }
-            private set { egyseg = value; }
-        }
+        public string Nev { get; set; }
+        public string Tipus { get; set; }
+        public bool Dijazott { get; set; }
+        public int Ar { get; set; }
+        public string Egyseg { get; set; }
 
         public Sutemeny(string nev, string tipus, bool dijazott, int ar, string egyseg)
         {
